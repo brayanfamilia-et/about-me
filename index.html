@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brayan Torres | Ethical Hacker & Dev</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Fondo de partículas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="bracket">[</span>BT<span class="bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#intereses">Intereses</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="terminal-window">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">brayan@kali:~$</span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-line"><span class="prompt">root@kali:~$</span> <span class="cmd" id="typed-cmd"></span><span class="cursor">█</span></p>
+            <div id="terminal-output" class="hidden">
+            <p><span class="green-text">Nombre:</span> Brayan Eusebio Torres Familia</p>
+            <p><span class="green-text">Edad:</span> 21 años</p>
+            <p><span class="green-text">Rol:</span> Estudiante de Informática & Dev</p>
+            <p><span class="green-text">OS:</span> Ubuntu Linux</p>
+            <p><span class="green-text">Status:</span> <span class="blink-text">ONLINE ●</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-text">
+          <h1 class="glitch" data-text="BRAYAN TORRES">BRAYAN TORRES</h1>
+          <p class="hero-subtitle"><span class="type-text" id="subtitle-text"></span></p>
+        <div class="hero-buttons">
+          <a href="#sobre-mi" class="btn btn-primary">
+            <i class="fas fa-terminal"></i> Ver perfil
+          </a>
+          <a href="#contacto" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Contactar
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// about_me.sh</span>
+        <h2 class="section-title">Sobre <span class="highlight">Mí</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-avatar">
+          <div class="avatar-frame">
+            <div class="avatar-icon">
+              <i class="fas fa-user-secret"></i>
+            </div>
+            <div class="avatar-ring ring1"></div>
+            <div class="avatar-ring ring2"></div>
+            <div class="avatar-ring ring3"></div>
+          </div>
+          <div class="avatar-badges">
+            <span class="badge"><i class="fab fa-linux"></i> Estudiando Linux</span>
+            <span class="badge"><i class="fas fa-shield-alt"></i> Aprendiendo Hacking Ético</span>
+            <span class="badge"><i class="fas fa-code"></i> Aprendiendo a programar</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="info-card">
+            <div class="info-header">
+              <i class="fas fa-id-card"></i>
+              <span>Perfil Personal</span>
+            </div>
+            <p>
+              Soy <strong>Brayan Eusebio Torres Familia</strong>, tengo <strong>21 años</strong> y me apasiona la informática en todas sus dimensiones. Me interesa mucho el <strong>hacking ético</strong> y la seguridad informática, y estoy aprendiendo sobre cómo funcionan los sistemas y sus vulnerabilidades.
+            </p>
+            <p>
+              Uso <strong>Ubuntu Linux</strong> como mi sistema operativo del día a día y me llama mucho la atención la <strong>ingeniería social</strong> como parte del estudio de la ciberseguridad.
+            </p>
+            <p>
+              También me gusta la programación y estoy aprendiendo a construir proyectos con <strong>Python, HTML y Java</strong>, siempre buscando nuevos retos y conocimientos.
+            </p>
+          </div>
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number">21</span>
+              <span class="stat-label">Años</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Lenguajes</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Curiosidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="section section-dark" id="habilidades">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// skills.py</span>
+        <h2 class="section-title">Mis <span class="highlight">Habilidades</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card" data-delay="0">
+          <div class="skill-icon"><i class="fas fa-shield-virus"></i></div>
+          <h3>Hacking Ético</h3>
+          <p>Me interesa el análisis de vulnerabilidades y el pentesting. Estoy aprendiendo sobre seguridad informática.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="80"></div>
+          </div>
+          <span class="skill-percent">80%</span>
+        </div>
+
+        <div class="skill-card" data-delay="100">
+          <div class="skill-icon"><i class="fab fa-linux"></i></div>
+          <h3>Linux / Ubuntu</h3>
+          <p>Uso Ubuntu como mi sistema principal y me gusta aprender sobre la terminal, scripting y el entorno Linux.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="85"></div>
+          </div>
+          <span class="skill-percent">85%</span>
+        </div>
+
+        <div class="skill-card" data-delay="200">
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <h3>Python</h3>
+          <p>Estoy aprendiendo Python para scripting, automatización y pequeños proyectos de programación.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="70"></div>
+          </div>
+          <span class="skill-percent">70%</span>
+        </div>
+
+        <div class="skill-card" data-delay="300">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <h3>HTML / Web</h3>
+          <p>Me gusta el desarrollo web y estoy aprendiendo a crear páginas y estructurar interfaces con HTML.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="65"></div>
+          </div>
+          <span class="skill-percent">65%</span>
+        </div>
+
+        <div class="skill-card" data-delay="400">
+          <div class="skill-icon"><i class="fab fa-java"></i></div>
+          <h3>Java</h3>
+          <p>Estoy estudiando Java para entender la programación orientada a objetos y la lógica de aplicaciones.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="60"></div>
+          </div>
+          <span class="skill-percent">60%</span>
+        </div>
+
+        <div class="skill-card" data-delay="500">
+          <div class="skill-icon"><i class="fas fa-brain"></i></div>
+          <h3>Ingeniería Social</h3>
+          <p>Me fascina estudiar cómo el factor humano influye en la seguridad y cómo se puede analizar y comprender.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="75"></div>
+          </div>
+          <span class="skill-percent">75%</span>
+        </div>
+
+        <div class="skill-card" data-delay="600">
+          <div class="skill-icon"><i class="fas fa-robot"></i></div>
+          <h3>Inteligencia Artificial</h3>
+          <p>Tengo amplio conocimiento en el manejo y uso de herramientas de IA como ChatGPT, Gemini, Copilot y más.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="88"></div>
+          </div>
+          <span class="skill-percent">88%</span>
+        </div>
+
+      </div>
+
+      <div class="tools-section">
+        <h3 class="tools-title"><i class="fas fa-tools"></i> Herramientas & Entorno</h3>
+        <div class="tools-list">
+          <span class="tool-tag"><i class="fas fa-code"></i> VSCode</span>
+          <span class="tool-tag"><i class="fab fa-linux"></i> Ubuntu</span>
+          <span class="tool-tag"><i class="fas fa-terminal"></i> Bash</span>
+          <span class="tool-tag"><i class="fas fa-network-wired"></i> Kali Linux</span>
+          <span class="tool-tag"><i class="fas fa-bug"></i> Nmap</span>
+          <span class="tool-tag"><i class="fas fa-lock"></i> Metasploit</span>
+          <span class="tool-tag"><i class="fab fa-git-alt"></i> Git</span>
+          <span class="tool-tag"><i class="fab fa-python"></i> Python3</span>
+          <span class="tool-tag"><i class="fas fa-robot"></i> ChatGPT</span>
+          <span class="tool-tag"><i class="fas fa-robot"></i> Gemini</span>
+          <span class="tool-tag"><i class="fab fa-bitcoin"></i> Blockchain</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERESES -->
+  <section class="section" id="intereses">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// interests.json</span>
+        <h2 class="section-title">Mis <span class="highlight">Intereses</span></h2>
+      </div>
+      <div class="interests-grid">
+
+        <div class="interest-card">
+          <div class="interest-icon cyber">
+            <i class="fas fa-user-secret"></i>
+          </div>
+          <h3>Ciberseguridad</h3>
+          <p>Me apasiona aprender sobre hacking ético, CTFs y la seguridad informática. Es un área que estudio con mucho interés.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon linux">
+            <i class="fab fa-linux"></i>
+          </div>
+          <h3>Linux & Open Source</h3>
+          <p>Ubuntu es mi sistema principal. Me encanta explorar el ecosistema open source y aprender la filosofía Linux.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon social">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Ingeniería Social</h3>
+          <p>Me fascina estudiar cómo el factor humano juega un papel clave en la seguridad informática.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon gaming">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <h3>Videojuegos</h3>
+          <p>Me gustan los videojuegos, especialmente Clash of Clans y juegos de alta dificultad. ¡Los retos son lo mejor!</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon code">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Programación</h3>
+          <p>Me gusta programar, aprender nuevos lenguajes y construir pequeños proyectos para practicar.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon tech">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3>Tecnología</h3>
+          <p>Me interesa estar al día con las últimas tendencias en tecnología, hardware, redes y el mundo digital.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon blockchain">
+            <i class="fab fa-bitcoin"></i>
+          </div>
+          <h3>Blockchain & Cripto</h3>
+          <p>Me llama mucho la atención la tecnología blockchain, las criptomonedas y el futuro de las finanzas descentralizadas.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon ai">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Inteligencia Artificial</h3>
+          <p>Tengo amplio conocimiento en el manejo y uso de herramientas de IA. Me fascina cómo está transformando el mundo.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon agri">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h3>Agricultura</h3>
+          <p>Me interesa la agricultura y cómo la tecnología puede mejorar los procesos del campo y la producción de alimentos.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon politics">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <h3>Política</h3>
+          <p>Me gusta seguir la actualidad política, entender los sistemas de gobierno y cómo impactan en la sociedad.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section-dark" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// contact.sh</span>
+        <h2 class="section-title">Contacto <span class="highlight">Conmigo</span></h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="contact-terminal">
+            <div class="terminal-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">contact.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> <span class="green-text">whoami</span></p>
+              <p class="output">Brayan Eusebio Torres Familia</p>
+              <p><span class="prompt">$</span> <span class="green-text">cat contacto.txt</span></p>
+              <p class="output"><span class="green-text">📧</span> brayantorresfamilia14@gmail.com</p>
+              <p class="output"><span class="green-text">📸</span> @brayan_familia.et</p>
+              <p class="output"><span class="green-text">🎵</span> @brayan_familia_et</p>
+              <p class="output"><span class="green-text">🐦</span> @BrayanFamiliaet</p>
+              <p class="output"><span class="green-text">✈️</span> @brayan_familia14</p>
+              <p><span class="prompt">$</span> <span class="green-text">echo "¡Hablemos!"</span></p>
+              <p class="output green-text">¡Hablemos! 🚀</p>
+              <p><span class="prompt">$</span> <span class="cursor-blink">█</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <div class="social-cards">
+            <a href="mailto:brayantorresfamilia14@gmail.com" class="social-card gmail" target="_blank" rel="noopener">
+              <div class="social-card-icon"><i class="fas fa-envelope"></i></div>
+              <div class="social-card-info">
+                <span class="social-card-name">Gmail</span>
+                <span class="social-card-user">brayantorresfamilia14@gmail.com</span>
+              </div>
+              <i class="fas fa-external-link-alt social-card-arrow"></i>
+            </a>
+            <a href="https://www.instagram.com/brayan_familia.et/" class="social-card instagram" target="_blank" rel="noopener">
+              <div class="social-card-icon"><i class="fab fa-instagram"></i></div>
+              <div class="social-card-info">
+                <span class="social-card-name">Instagram</span>
+                <span class="social-card-user">@brayan_familia.et</span>
+              </div>
+              <i class="fas fa-external-link-alt social-card-arrow"></i>
+            </a>
+            <a href="https://www.tiktok.com/@brayan_familia_et" class="social-card tiktok" target="_blank" rel="noopener">
+              <div class="social-card-icon"><i class="fab fa-tiktok"></i></div>
+              <div class="social-card-info">
+                <span class="social-card-name">TikTok</span>
+                <span class="social-card-user">@brayan_familia_et</span>
+              </div>
+              <i class="fas fa-external-link-alt social-card-arrow"></i>
+            </a>
+            <a href="https://x.com/BrayanFamiliaet" class="social-card twitter" target="_blank" rel="noopener">
+              <div class="social-card-icon"><i class="fab fa-x-twitter"></i></div>
+              <div class="social-card-info">
+                <span class="social-card-name">X (Twitter)</span>
+                <span class="social-card-user">@BrayanFamiliaet</span>
+              </div>
+              <i class="fas fa-external-link-alt social-card-arrow"></i>
+            </a>
+            <a href="https://t.me/brayan_familia14" class="social-card telegram" target="_blank" rel="noopener">
+              <div class="social-card-icon"><i class="fab fa-telegram"></i></div>
+              <div class="social-card-info">
+                <span class="social-card-name">Telegram</span>
+                <span class="social-card-user">@brayan_familia14</span>
+              </div>
+              <i class="fas fa-external-link-alt social-card-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="bracket">[</span>BT<span class="bracket">]</span>
+        <span class="footer-name">Brayan Torres</span>
+      </div>
+      <p class="footer-quote">"El conocimiento es el arma más poderosa." — Brayan Torres</p>
+      <div class="footer-social">
+        <a href="mailto:brayantorresfamilia14@gmail.com" class="social-link" title="Gmail"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com/brayan_familia.et/" class="social-link" title="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@brayan_familia_et" class="social-link" title="TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+        <a href="https://x.com/BrayanFamiliaet" class="social-link" title="X (Twitter)" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://t.me/brayan_familia14" class="social-link" title="Telegram" target="_blank" rel="noopener"><i class="fab fa-telegram"></i></a>
+      </div>
+      <p class="footer-copy">© 2024 Brayan Torres · Hecho con <span class="heart">♥</span> y mucho <i class="fas fa-terminal"></i></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
